@@ -16,9 +16,9 @@ def main(rate_c1, end):
         module load miniconda
         conda activate jupyterlab
 
-        python ./c1_{}_end_{}.py >> c1_{}_end_{}.out
+        python ./c1_end.py {} {} >> c1_{}_end_{}.out
         '''.format(rate_c1, end, rate_c1, end, rate_c1, end,
-                   rate_c1, end, rate_c1, end)
+                   rate_c1, end, rate_c1, end, rate_c1, end)
     with open("c1_{}_end_{}.sbatch".format(rate_c1, end), "w") as f:
         for l in s.strip().split("\n"):
             f.write(l.strip() + "\n")
