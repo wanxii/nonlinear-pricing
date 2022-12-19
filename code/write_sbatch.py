@@ -25,6 +25,6 @@ def main(rate_c1, end):
     print("Created file", "c1_{}_end_{}.sbatch".format(rate_c1, end))
 
 if __name__ == "__main__":
-    rate_c1 = input("c1 Multiplier: ")
-    end = input("End: ")
+    rate_c1 = sys.argv[1]
+    end = sys.argv[2]
     main(rate_c1, end)
