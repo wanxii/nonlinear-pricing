@@ -166,7 +166,7 @@ def Profit(Y, Q, cmat, cost, continuity, group=None):
             "Quantity": q_star,
             "Value": "Fitted"
             })
-        df["Binary"] = np.where(df.Revenue == 0, 0, 1)
+        df["Acceptance"] = np.where(df.Revenue == 0, 0, 1)
 
     return(np.sum(profits)/len(profits), profits, q_star, q_pos, total_costs, variable_costs, c_welfare, df)
 
